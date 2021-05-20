@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title></title>
+<script language="javascript" src="KY-029v2.js"></script>
+<style>
+    canvas{
+        padding: 0;
+        margin: auto;
+        display: block;
+        width: 500px;
+        height: 400px;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-image: linear-gradient(to right, rgb(255, 255, 255) , rgb(0, 0, 0));
+    }
+    </style>
+</head>
+<body>
+<canvas id="myCanvas" width="500" height="400" style="border:1px solid #000000;"></canvas>
+<script>
+    var canvas = document.getElementById("myCanvas");
+    var ctx = canvas.getContext("2d");
+    let modul1 = new KY029(ctx, false, 0, 0, 0, 0);
+    let modul2 = new KY029(ctx, false, 0, 0, 0, 100);
+    let modul3 = new KY029(ctx, false, 0, 0, 0, 200);
+    let modul4 = new KY029(ctx, false, 0, 0, 0, 300);
+
+    modul4.method2(ctx, true, 0, 0);
+    modul3.method2(ctx, true, 0, 1);
+    modul2.method2(ctx, true, 1, 1);
+    modul1.method2(ctx, true, 1, 0);
+</script>
+</body>
+</html>
